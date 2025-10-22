@@ -6,7 +6,7 @@ body {
 main {
     z-index: -1;
     height: 100vh;
-    background-image: url(../assets/bday.jpg);
+    background-image: url(../assets/diwali.png);
     background-position: center;
     background-size: contain;
     backdrop-filter: blur(15px);
