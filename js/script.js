@@ -88,11 +88,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
 
         setTimeout(() => {
-            mainContent.style.background = "url(../assets/image.png) repeat";
-            mainContent.style.backgroundSize = "cover";
-            mainContent.style.transition = 'opacity 0.5s ease-in-out';
+            mainContent.style.background = `
+            linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+            url(../assets/mirror.png) repeat
+            `;
+            // mainContent.style.backgroundSize = "cover";
+            // mainContent.style.transition = 'opacity 0.5s ease-in-out';
 
-            container.style.backgroundColor = "rgba(236, 1, 217, 0.7)";
+            container.style.background = "url(../assets/mirror.png) repeat";
             const msgText = "Wishing you a day as Beautiful as you are Pellaaaaaaaaamaaaaaaaaa 😘😘🤗🤗 I Loveeee yoouuuuuu sooooooooooooooo mucccccccccchhhhhhhhhhh";
             typeText(introMsg, msgText, 100);
         }, 36000);
@@ -172,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayAge() {
-        const birthDate = new Date('2005-10-23');
+        const birthDate = new Date('2005-10-23T00:00:00');
         const ageDisplay = document.querySelector('#age-display');
 
         function updateAge() {
