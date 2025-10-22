@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const introContainer = document.querySelector('.intro-container');
     const ccHeading = document.querySelector('#intro-container h1');
     const introMessage = document.querySelector('#intro-container h2');
-    const messageText = 'Wish you a very veryy<br>Happy Birthdayyyy Babyy <br> <img src="../assets/heart2.jpg" alt="">';
+    const messageText = 'Wish you a very veryy<br>Happy Birthdayyyy <br> Bujji Bangaaram <br> <img src="../assets/heart2.jpg" alt="">';
     const container = document.querySelector('.container');
 
     const loadingMessage = document.querySelector('#loading-screen h1');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
 
         setTimeout(() => {
-            mainContent.style.background = "url(../assets/bgh.jpg) repeat";
+            mainContent.style.background = "url(../assets/image.png) repeat";
             mainContent.style.backgroundSize = "cover";
             mainContent.style.transition = 'opacity 0.5s ease-in-out';
 
