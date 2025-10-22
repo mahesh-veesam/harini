@@ -1,0 +1,286 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", "gentium plus";
+}
+main {
+    z-index: -1;
+    height: 100vh;
+    background-image: url(../assets/bday.jpg);
+    background-position: center;
+    background-size: contain;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    mix-blend-mode: darken;
+    padding: 30px;
+}
+.container {
+    position: relative;
+    height: 90vh;
+    width: 70%;
+    margin: 30% auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #85087ac0;
+    backdrop-filter: blur(10px);
+    border-radius: 30% 10% 30% 10%;
+    z-index: 999;
+    animation: zoomIn 5s linear forwards;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.6);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.image {
+    height: 30vh;
+    width: 20vw;
+    margin: 2rem;
+}
+.msg {
+    position: relative;
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: typing 3s steps(30, end);
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px 20px 50px 20px;
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: linear-gradient(135deg, #000000, #141414);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #ff6f61;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.loading-message {
+    text-align: center;
+    font-family: gentium plus;
+    animation: fadeInOut 2s infinite;
+}
+.loading-message h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(211, 0, 158, 0.2);
+}
+.loading-message h1, .intro-container h2 {
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+#intro-tab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/cake.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+    #intro-tab {
+        background-size: contain;
+        background-position: center;
+    }
+}
+@media (max-width: 480px) {
+    #intro-tab {
+        background-size: cover;
+        background-position: top;
+    }
+}
+.intro-container {
+    text-align: center;
+    font-family: "gentium plus";
+    font-weight: 900;
+    font-size: 25px;
+    color: #380000;
+}
+.intro-container h2 {
+    line-height: 50px;
+}
+.intro-container h2 img {
+    opacity: 1;
+    width: 30%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    mix-blend-mode: darken;
+    animation: heartbeat2 1.5s infinite;
+}
+.heartbeat {
+    animation: heartbeat1 8s linear;
+}
+@keyframes heartbeat1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+@keyframes heartbeat2 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+#start-button {
+    margin-top: 20px;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    background-image: url(../assets/bgh.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(29, 0, 0);
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    visibility: hidden;
+    animation: transform 0.5s ease-in-out;
+}
+#start-button:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s ease-in-out;
+}
+main {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        height: 80vh;
+        width: 90%;
+        border-radius: 20% 10% 20% 10%;
+        padding: 10px;
+        background-size: contain;
+        background-position: center;
+    }
+    .msg {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    .image {
+        height: 20vh;
+        width: 40vw;
+        margin: 1rem;
+    }
+    #start-button {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+    .intro-container img {
+        width: 70%;
+        margin: 5px auto;
+        mix-blend-mode: darken;
+    }
+    main {
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        height: 88vh;
+        width: 95%;
+        border-radius: 15% 5% 15% 5%;
+        background-size: cover;
+        background-position: top;
+    }
+    .msg {
+        font-size: 1rem;
+    }
+    .image {
+        height: 15vh;
+        width: 50vw;
+    }
+    #start-button {
+        font-size: 0.9rem;
+        padding: 6px 20px;
+    }
+    .intro-container img {
+        width: 80%;
+        mix-blend-mode: darken;
+    }
+}
