@@ -79,11 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
         introTab.style.transition = 'opacity 0.3s ease-in-out';
 
         const introMsg = document.querySelector('.container .msg');
-        const msgText = "Happyyy Birthdayy to my pellaaaaaaaaaaamaaaaaaaaaa";
+        const msgText = "Happyyy Birthdayy pellaaaaaaaaaaamaaaaaaaaaa, eppudaina misunderstandings vasthe kalisi solve chedham thappa godava padodhu , nuvve kaadhu nenu kooda chaala miss avuthunna roju , kaani choopinchatle , happy birthday bujji bangaaram i love you pellaaaaaaamaaaaaaaaaaa";
         typeText(introMsg, msgText, 100);
 
         setTimeout(() => {
-            mainContent.style.backgroundSize = "auto";
+            // mainContent.style.backgroundSize = "cover";
+            mainContent.style.backgroundRepeat = "repeat";
+            mainContent.style.backgroundSize = "100px 200px";
             mainContent.style.transition = 'opacity 1s ease-in-out';
         }, 5000);
 
@@ -92,11 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
             linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
             url(../assets/mirror.png) repeat
             `;
-            // mainContent.style.backgroundSize = "cover";
-            // mainContent.style.transition = 'opacity 0.5s ease-in-out';
 
             container.style.background = "url(../assets/mirror.png) repeat";
-            const msgText = "Wishing you a day as Beautiful as you are Pellaaaaaaaaamaaaaaaaaa 😘😘🤗🤗 I Loveeee yoouuuuuu sooooooooooooooo mucccccccccchhhhhhhhhhh";
+            const msgText = "Wishing you a day as Beautiful as you are Pellaaaaaaaaamaaaaaaaaa 😘😘🤗🤗 I Loveeee yoouuuuuu sooooooooooooooo mucccccccccchhhhhhhhhhh kannammaaaaaaaa";
             typeText(introMsg, msgText, 100);
         }, 36000);
 
